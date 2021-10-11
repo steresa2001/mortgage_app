@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="scripts/script.minify.js"></script>
+  </head>
+  <body>
+    <header class="mortgageHeader">
+      <h1 class="mortgageHeader__title">Mortgage Calculator</h1>
+    </header>
+    <main class="mortgage-container">
+      <section class="calculator">
+        <h2 class="calculator__title">
+          Change values to calculate your results
+        </h2>
+        <hr class="calculator__devider" />
+        <div class="calculator__formGroup">
+          <label for="mortgage-range-slider" class="calculator__label">
+            Years of mortgage
+          </label>
+          <div class="calculator__rangeSliderContainer">
+            <label for="mortgage-range-slider" class="calculator__rangeLabel"
+              >1</label
+            >
+            <input
+              type="range"
+              min="1"
+              max="40"
+              step="1"
+              id="js-mortgage-range-slider"
+              class="calculator__rangeSlider"
+            />
+            <label for="mortgage-range-slider" class="calculator__rangeLabel"
+              >40</label
+            >
+            <input
+              type="text"
+              id="js-YearsOfMortgage"
+              class="textInput textInput--small"
+              data-input="mortgage"
+              placeholder="30"
+              aria-live="polite"
+            />
+          </div>
+          <div
+            class="error range-error hide"
+            data-error="mortgage"
+            role="alert"
+          >
+            Mandatory field
+          </div>
+        </div>
+        <div class="calculator__formGroup">
+          <label for="interest-slider" class="calculator__label">
+            Rate of interest (%)
+          </label>
+          <div class="calculator__rangeSliderContainer">
+            <label for="interest-slider" class="calculator__rangeLabel"
+              >0.1</label
+            >
+            <input
+              type="range"
+              min=".1"
+              max="10"
+              step=".1"
+              id="js-interest-slider"
+              class="calculator__rangeSlider"
+            />
+            <label for="interest-slider" class="calculator__rangeLabel"
+              >10</label
+            >
+            <input
+              type="text"
+              id="js-interest"
+              class="textInput textInput--small"
+              placeholder="10"
+              aria-live="polite"
+              data-input="interest"
+            />
+          </div>
+          <div
+            class="error range-error hide"
+            data-error="interest"
+            role="alert"
+          >
+            Mandatory field
+          </div>
+        </div>
+        <div class="calculator__formGroup">
+          <label for="loan-amount" class="calculator__formLabel">
+            Loan Amount
+          </label>
+          <input
+            type="text"
+            placeholder="$"
+            id="js-loan"
+            class="textInput textInput--large"
+            data-input="loan"
+          />
+          <div class="error hide" data-error="loan" role="alert">
+            Mandatory field
+          </div>
+        </div>
+        <div class="calculator__formGroup">
+          <div class="calculator__annualTaxContainer float-left">
+            <label for="annual-tax" class="calculator__formLabel">
+              Annual Tax
+            </label>
+            <input
+              type="text"
+              placeholder="$"
+              id="js-tax"
+              data-input="tax"
+              class="textInput textInput--large"
+            />
+            <div class="error hide" data-error="tax">Mandatory field</div>
+          </div>
+          <div class="calculator__annualInsuranceContainer float-right">
+            <label for="annual-insurance" class="calculator__formLabel">
+              Annual Insurance
+            </label>
+            <input
+              type="text"
+              placeholder="$"
+              id="js-insurance"
+              class="textInput textInput--large"
+              data-input="insurance"
+            />
+            <div class="error hide" data-error="insurance" role="alert">
+              Mandatory field
+            </div>
+          </div>
+        </div>
+        <button
+          type="submit"
+          id="js-calculate-button"
+          class="button button--primary"
+        >
+          Calculate
+        </button>
+      </section>
+      <section class="results">
+        <h1 class="results__title">Your results</h1>
+        <div class="results__row">
+          <span class="results__heading">Principal & Interest</span>
+          <span
+            id="js-interest-result"
+            class="results__placeholder results__placeholder--medium"
+            >$ --</span
+          >
+        </div>
+        <div class="results__row">
+          <span class="results__heading">Tax</span>
+          <span
+            id="js-tax-result"
+            class="results__placeholder results__placeholder--medium"
+            >$ --</span
+          >
+        </div>
+        <div class="results__row">
+          <span class="results__heading">Insurance</span>
+          <span
+            id="js-insurance-result"
+            class="results__placeholder results__placeholder--medium"
+            >$ --</span
+          >
+        </div>
+        <hr class="results__devider" />
+        <div class="results__row">
+          <h2 class="results__total">Total Monthly Payment</h2>
+          <span
+            id="js-total-result"
+            class="results__placeholder results__placeholder--medium"
+            >$ --</span
+          >
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

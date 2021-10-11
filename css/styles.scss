@@ -1,0 +1,340 @@
+@import "vars";
+@import "mixins";
+
+body {
+  background-color: $base-white;
+  margin: 0;
+  font-family: $base-font;
+}
+.mortgage-container {
+  margin-left: 5%;
+  display: flex;
+}
+.mortgageHeader {
+  color: $base-black;
+  width: 100%;
+  height: 64px;
+  @include primary-box-shadow;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  &__title {
+    margin-left: 5%;
+    font-size: 34px;
+    font-family: $secondary-font;
+  }
+}
+// Calculator
+.calculator {
+  width: 60%;
+  max-width: 677px;
+  @include primary-border-radius;
+  @include primary-box-shadow;
+  top: 115px;
+  position: relative;
+  padding: 20px;
+  @include border-box;
+  &__title {
+    font-size: $base-font-size;
+    color: $base-black;
+    font-weight: normal;
+    margin-bottom: 18px;
+  }
+  &__devider {
+    border: 1px solid $base-gray-lighter;
+  }
+  &__formLabel {
+    font-size: 15px;
+    color: $base-black;
+  }
+  &__formGroup {
+    margin-top: 32px;
+  }
+  &__rangeSliderContainer {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__rangeLabel {
+    font-size: 20px;
+    @include bold;
+  }
+  &__rangeSlider {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 68%;
+    background: $base-gray-lighter;
+    background-image: linear-gradient(
+      $primary-blue-darkest,
+      $primary-blue-darkest
+    );
+    background-size: 48% 100%;
+    background-repeat: no-repeat;
+    @include primary-border-radius;
+  }
+  &__rangeSlider:focus {
+    outline: none;
+  }
+  &__rangeSlider::-webkit-slider-runnable-track {
+    width: 68%;
+    height: 16px;
+  }
+  &__rangeSlider:focus::-webkit-slider-runnable-track {
+    @include primary-box-shadow;
+  }
+  &__rangeSlider::-webkit-slider-thumb {
+    @include primary-box-shadow;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background: $base-white;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+  }
+  &__rangeSlider::-moz-range-thumb {
+    @include primary-box-shadow;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background: $base-white;
+    cursor: pointer;
+  }
+  &__rangeSlider::-ms-thumb {
+    @include primary-box-shadow;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background: $base-white;
+    cursor: pointer;
+  }
+  &__rangeSlider::-moz-range-track {
+    height: 16px;
+    cursor: pointer;
+  }
+  &__rangeSlider:focus::-moz-range-track {
+    @include primary-box-shadow;
+  }
+  &__annualTaxContainer,
+  &__annualInsuranceContainer {
+    display: inline-block;
+  }
+  &__annualTaxContainer {
+    width: 43%;
+  }
+  &__annualInsuranceContainer {
+    width: 52%;
+    margin-left: 4%;
+  }
+}
+// Results
+.results {
+  width: 40%;
+  max-width: 463px;
+  border-radius: 0px 0px 8px 8px;
+  top: 150px;
+  left: 5px;
+  position: relative;
+  @include border-box;
+  background-color: $base-gray-lightest;
+  padding: 30px 30px 0 30px;
+  &__title {
+    font-size: 25px;
+    color: $base-black;
+    @include bold;
+  }
+  &__total {
+    font-size: 30px;
+    color: $base-black-lighter;
+    font-weight: 400;
+    margin: 20px 0 0;
+  }
+  &__heading {
+    font-size: $base-font-size;
+    font-weight: 400;
+    color: $base-black-lighter;
+    display: block;
+  }
+  &__placeholder {
+    font-size: 25px;
+    font-weight: 600;
+    padding: 20px 0;
+    display: block;
+  }
+  &__placeholder--dark {
+    color: $base-black;
+  }
+  &__placeholder--medium {
+    color: $base-gray-medium;
+  }
+  &__devider {
+    border: 1px solid $base-gray-lighter;
+  }
+}
+
+.textInput {
+  height: 48px;
+  margin: 12px 0 5px;
+  padding: 14px 24px 14px 24px;
+  border: 1px solid $base-gray-medium;
+  @include primary-border-radius;
+  @include border-box;
+  @include bold;
+  font-size: $base-font-size;
+  color: $base-black;
+  &:focus-visible {
+    border: 1px solid $primary-blue-lighter;
+    @include primary-box-shadow;
+  }
+  &::placeholder {
+    color: $base-black-lightest;
+    font-weight: normal;
+  }
+  &--large {
+    width: 100%;
+  }
+  &--small {
+    width: 88px;
+    text-align: center;
+  }
+  &__required__highlight {
+    border-color: $primary-warning;
+  }
+}
+
+.button {
+  width: 100%;
+  height: 56px;
+  @include primary-border-radius;
+  font-size: 20px;
+  @include bold;
+  text-align: center;
+  border: none;
+  margin-top: 20px;
+  &--primary {
+    background-color: $primary-blue;
+    color: $base-white;
+  }
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}
+
+.error {
+  color: $primary-warning;
+  font-size: 12px;
+  @include bold;
+}
+.range-error {
+  @include float-right;
+  margin-right: 2%;
+}
+.text-input-required-highlight {
+  border-color: $primary-warning;
+}
+
+// Utility classes
+.float-left {
+  @include float-left;
+}
+.float-right {
+  @include float-right;
+}
+.hide {
+  @include hide;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0 15px;
+  }
+  .mortgage-container {
+    margin-left: 0;
+    flex-direction: column;
+  }
+  .calculator {
+    top: 90px;
+  }
+
+  .calculator__formGroup {
+    margin-top: 15px;
+  }
+  .calculator__rangeSliderContainer {
+    margin-top: 0px;
+  }
+  .calculator__rangeLabel {
+    font-size: 14px;
+  }
+  .calculator,
+  .results {
+    width: 100%;
+    max-width: 100%;
+  }
+  .results {
+    left: 0;
+    top: 115px;
+  }
+  .calculator__title {
+    margin-bottom: 25px;
+  }
+  .calculator__devider {
+    position: absolute;
+    top: 52px;
+    width: 100%;
+    left: 0;
+  }
+  .calculator__results {
+    left: 0;
+    top: 115px;
+  }
+  .results__title {
+    margin-top: 0;
+  }
+  .calculator__annualTaxContainer,
+  .calculator__annualInsuranceContainer {
+    width: 48%;
+  }
+  .calculator__annualInsuranceContainer {
+    margin-left: 8px;
+  }
+  .mortgage__title {
+    margin-left: 20px;
+    font-size: 30px;
+  }
+  .calculator__rangeSlider {
+    width: 45%;
+  }
+  .calculator__rangeSlider::-webkit-slider-runnable-track {
+    height: 10px;
+  }
+  .calculator__rangeSlider::-webkit-slider-thumb {
+    height: 26px;
+    width: 26px;
+    margin-top: -10px;
+  }
+  .results__row {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    border-bottom: 1px solid $base-gray-lighter;
+    margin-bottom: 26px;
+  }
+  .results__heading,
+  .results__total {
+    font-size: 12px;
+    margin-top: 0;
+  }
+  .results__placeholder {
+    font-size: $base-font-size;
+    padding: 0 0 5px 0;
+  }
+  .results__devider {
+    display: none;
+  }
+  .range-error {
+    margin-right: 5%;
+  }
+}

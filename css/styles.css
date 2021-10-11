@@ -1,0 +1,416 @@
+body {
+  background-color: #fff;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.mortgage-container {
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mortgageHeader {
+  color: #000;
+  width: 100%;
+  height: 64px;
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 0;
+}
+
+.mortgageHeader__title {
+  margin-left: 5%;
+  font-size: 34px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.calculator {
+  width: 60%;
+  max-width: 677px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+  top: 115px;
+  position: relative;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.calculator__title {
+  font-size: 16px;
+  color: #000;
+  font-weight: normal;
+  margin-bottom: 18px;
+}
+
+.calculator__devider {
+  border: 1px solid #dddddd;
+}
+
+.calculator__formLabel {
+  font-size: 15px;
+  color: #000;
+}
+
+.calculator__formGroup {
+  margin-top: 32px;
+}
+
+.calculator__rangeSliderContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calculator__rangeLabel {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.calculator__rangeSlider {
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 68%;
+  background: #dddddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1b3979), to(#1b3979));
+  background-image: linear-gradient(#1b3979, #1b3979);
+  background-size: 48% 100%;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
+.calculator__rangeSlider:focus {
+  outline: none;
+}
+
+.calculator__rangeSlider::-webkit-slider-runnable-track {
+  width: 68%;
+  height: 16px;
+}
+
+.calculator__rangeSlider:focus::-webkit-slider-runnable-track {
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+}
+
+.calculator__rangeSlider::-webkit-slider-thumb {
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+
+.calculator__rangeSlider::-moz-range-thumb {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.calculator__rangeSlider::-ms-thumb {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.calculator__rangeSlider::-moz-range-track {
+  height: 16px;
+  cursor: pointer;
+}
+
+.calculator__rangeSlider:focus::-moz-range-track {
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+}
+
+.calculator__annualTaxContainer, .calculator__annualInsuranceContainer {
+  display: inline-block;
+}
+
+.calculator__annualTaxContainer {
+  width: 43%;
+}
+
+.calculator__annualInsuranceContainer {
+  width: 52%;
+  margin-left: 4%;
+}
+
+.results {
+  width: 40%;
+  max-width: 463px;
+  border-radius: 0px 0px 8px 8px;
+  top: 150px;
+  left: 5px;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #fbfbfb;
+  padding: 30px 30px 0 30px;
+}
+
+.results__title {
+  font-size: 25px;
+  color: #000;
+  font-weight: bold;
+}
+
+.results__total {
+  font-size: 30px;
+  color: #5d5d5d;
+  font-weight: 400;
+  margin: 20px 0 0;
+}
+
+.results__heading {
+  font-size: 16px;
+  font-weight: 400;
+  color: #5d5d5d;
+  display: block;
+}
+
+.results__placeholder {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 20px 0;
+  display: block;
+}
+
+.results__placeholder--dark {
+  color: #000;
+}
+
+.results__placeholder--medium {
+  color: #bbbcbc;
+}
+
+.results__devider {
+  border: 1px solid #dddddd;
+}
+
+.textInput {
+  height: 48px;
+  margin: 12px 0 5px;
+  padding: 14px 24px 14px 24px;
+  border: 1px solid #bbbcbc;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+}
+
+.textInput:focus-visible {
+  border: 1px solid #1f58d2;
+  -webkit-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+}
+
+.textInput::-webkit-input-placeholder {
+  color: #bababa;
+  font-weight: normal;
+}
+
+.textInput:-ms-input-placeholder {
+  color: #bababa;
+  font-weight: normal;
+}
+
+.textInput::-ms-input-placeholder {
+  color: #bababa;
+  font-weight: normal;
+}
+
+.textInput::placeholder {
+  color: #bababa;
+  font-weight: normal;
+}
+
+.textInput--large {
+  width: 100%;
+}
+
+.textInput--small {
+  width: 88px;
+  text-align: center;
+}
+
+.textInput__required__highlight {
+  border-color: #d83e00;
+}
+
+.button {
+  width: 100%;
+  height: 56px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  margin-top: 20px;
+}
+
+.button--primary {
+  background-color: #316eef;
+  color: #fff;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.error {
+  color: #d83e00;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.range-error {
+  float: right;
+  margin-right: 2%;
+}
+
+.text-input-required-highlight {
+  border-color: #d83e00;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0 15px;
+  }
+  .mortgage-container {
+    margin-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .calculator {
+    top: 90px;
+  }
+  .calculator__formGroup {
+    margin-top: 15px;
+  }
+  .calculator__rangeSliderContainer {
+    margin-top: 0px;
+  }
+  .calculator__rangeLabel {
+    font-size: 14px;
+  }
+  .calculator,
+  .results {
+    width: 100%;
+    max-width: 100%;
+  }
+  .results {
+    left: 0;
+    top: 115px;
+  }
+  .calculator__title {
+    margin-bottom: 25px;
+  }
+  .calculator__devider {
+    position: absolute;
+    top: 52px;
+    width: 100%;
+    left: 0;
+  }
+  .calculator__results {
+    left: 0;
+    top: 115px;
+  }
+  .results__title {
+    margin-top: 0;
+  }
+  .calculator__annualTaxContainer,
+  .calculator__annualInsuranceContainer {
+    width: 48%;
+  }
+  .calculator__annualInsuranceContainer {
+    margin-left: 8px;
+  }
+  .mortgage__title {
+    margin-left: 20px;
+    font-size: 30px;
+  }
+  .calculator__rangeSlider {
+    width: 45%;
+  }
+  .calculator__rangeSlider::-webkit-slider-runnable-track {
+    height: 10px;
+  }
+  .calculator__rangeSlider::-webkit-slider-thumb {
+    height: 26px;
+    width: 26px;
+    margin-top: -10px;
+  }
+  .results__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 26px;
+  }
+  .results__heading,
+  .results__total {
+    font-size: 12px;
+    margin-top: 0;
+  }
+  .results__placeholder {
+    font-size: 16px;
+    padding: 0 0 5px 0;
+  }
+  .results__devider {
+    display: none;
+  }
+  .range-error {
+    margin-right: 5%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
